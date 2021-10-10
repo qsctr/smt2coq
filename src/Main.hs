@@ -21,8 +21,8 @@ import           Language.Coq.Util.PrettyPrint
 import           Language.SMT2.Parser          (parseFileMsg, script)
 import           Language.SMT2.Syntax          as SMT2
 import           System.Environment
+import           System.FilePath
 import           System.IO
-import System.FilePath
 
 main :: IO ()
 main = do
