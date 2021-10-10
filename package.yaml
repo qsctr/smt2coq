@@ -1,0 +1,26 @@
+name: smt2coq
+version: 0.1.0.0
+author: Bretton Chen
+maintainer: Bretton Chen
+copyright: (c) 2021 Bretton Chen
+license: MIT
+github: qsctr/smt2coq
+extra-source-files:
+  - README.md
+dependencies:
+  - base >= 4.7 && < 5
+  - containers
+  - filepath
+  - language-coq
+  - mtl
+  - smt2-parser
+  - text
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+executable:
+  source-dirs: src
+  main: Main.hs
