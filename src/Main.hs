@@ -168,6 +168,7 @@ trTerm (TermApplication (Unqualified (IdSymbol f)) args)
             "<="  -> "leb"
             "and" -> "andb"
             "or"  -> "orb"
+            "not" -> "negb"
             _     -> trName f
         shouldFold = ["and", "or"] :: [Symbol]
 trTerm term = error $ "Could not translate term: " ++ show term
