@@ -34,7 +34,10 @@ main = do
             Right cmds -> do
                 let baseName = fromMaybe filename $
                         stripExtension "smt2" filename
-                withFile (baseName ++ ".v") WriteMode $ \h ->
+                    coqBaseName = map tr baseName
+                      where tr '-' = '_'
+                            tr x   = x
+                withFile (coqBaseName ++ ".v") WriteMode $ \h ->
                     for_ (translate cmds) $ \sentence -> do
                         displayIO h $ renderPretty 1 160 $
                             renderGallina sentence
